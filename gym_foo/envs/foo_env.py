@@ -17,7 +17,7 @@ class inv_pendulum(MuJocoPyEnv.MujocoEnv,  utils.EzPickle):
         FILE_PATH = os.getcwd() +'/drive/MyDrive/Colab Notebooks/inv_pendulum.py'
         observation_space = Box(low=-np.inf, high=np.inf, shape=(4,), dtype=np.float64)
         utils.EzPickle.__init__(self,**kwargs)
-        mujoco_env.MujocoEnv.__init__(self, FILE_PATH, 5, observation_space=observation_space, **kwargs)
+        MuJocoPyEnv.__init__(self, FILE_PATH, 5, observation_space=observation_space, **kwargs)
 
 
         # Angle at which to fail the episode
