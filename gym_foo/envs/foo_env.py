@@ -13,7 +13,7 @@ class inv_pendulum(mujoco_env.MujocoEnv,  utils.EzPickle):
        This is the description
     """
     def __init__(self,**kwargs):
-        FILE_PATH = os.getcwd() +'/drive/MyDrive/Colab Notebooks/inv_pendulum.py'
+        FILE_PATH = 'InversePendululm.xml'   #os.getcwd() +'/drive/MyDrive/Colab Notebooks/inv_pendulum.py'
         observation_space = Box(low=-np.inf, high=np.inf, shape=(4,), dtype=np.float64)
         utils.EzPickle.__init__(self,**kwargs)
         mujoco_env.MujocoEnv.__init__(self, FILE_PATH, 5, observation_space=observation_space, **kwargs)
