@@ -5,6 +5,7 @@ import numpy as np
 from gym.envs.mujoco import mujoco_env 
 from gym.spaces import Box
 import xml.etree.ElementTree as ET1
+import math
 
 
 class inv_pendulum(mujoco_env.MujocoEnv,  utils.EzPickle):
