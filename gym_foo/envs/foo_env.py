@@ -16,7 +16,7 @@ class inv_pendulum(mujoco_env.MujocoEnv,  utils.EzPickle):
             "single_rgb_array",
             "single_depth_array",
         ],
-        "render_fps": 20,
+        "render_fps": 100,
     }
     def __init__(self,**kwargs):
         FILE_PATH = '/content/Gym-foo/gym_foo/envs/assets/InversePendululm.xml'   #os.getcwd() +'/drive/MyDrive/Colab Notebooks/inv_pendulum.py'
