@@ -8,10 +8,16 @@ import xml.etree.ElementTree as ET1
 
 
 class inv_pendulum(mujoco_env.MujocoEnv,  utils.EzPickle):
-    """
-       ### Description
-       This is the description
-    """
+    metadata = {
+        "render_modes": [
+            "human",
+            "rgb_array",
+            "depth_array",
+            "single_rgb_array",
+            "single_depth_array",
+        ],
+        "render_fps": 20,
+    }
     def __init__(self,**kwargs):
         FILE_PATH = '/content/Gym-foo/gym_foo/envs/assets/InversePendululm.xml'   #os.getcwd() +'/drive/MyDrive/Colab Notebooks/inv_pendulum.py'
         observation_space = Box(low=-np.inf, high=np.inf, shape=(4,), dtype=np.float64)
